@@ -7,6 +7,8 @@ import React, {
 
 import Tilt from 'react-parallax-tilt';
 
+import ByTheNumbersIcon from '../icons/neutral-trading.png';
+
 /* Context */
 import MainContext from '../context/mainContext';
 import themes from '../themes';
@@ -31,7 +33,11 @@ const ByTheNumbers = ({ history }) => {
                 onClick={() => { history.push('/portfolio') }}
             >
                 Back
-                </button>
+            </button>
+            <div className="pageTitle">
+                <p>By the numbers</p>
+                <img src={ByTheNumbersIcon} alt="icon" />
+            </div>
             <div className="inner-element">
                 <div className="flex-wrapper flex-wrapper-byTheNumbers">
                     {

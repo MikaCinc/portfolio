@@ -8,6 +8,8 @@ import React, {
 import Tilt from 'react-parallax-tilt';
 import Fade from 'react-reveal/Fade';
 
+import skillsIcon from '../icons/skills.png';
+
 /* Context */
 import MainContext from '../context/mainContext';
 import themes from '../themes';
@@ -32,14 +34,18 @@ const Skills = ({ history }) => {
                 onClick={() => { history.push('/portfolio') }}
             >
                 Back
-                </button>
+            </button>
+            <div className="pageTitle">
+                <p>Development Skills</p>
+                <img src={skillsIcon} alt="icon" />
+            </div>
             <div className="inner-element">
                 <Fade cascade bottom>
                     <div className="flex-wrapper">
                         {
                             skills.map(item => {
                                 return (
-                                    <p className="skillsItem">{item}</p>
+                                    <p key={item} className="skillsItem">{item}</p>
                                 )
                             })
                         }

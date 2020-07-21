@@ -96,7 +96,7 @@ p {
 }
 
 .item-biography {
-  grid-area: 7 / 10 / span 2 / span 2;
+  grid-area: 10 / 6 / span 2 / span 2;
 }
 
 .item-contact {
@@ -116,7 +116,7 @@ p {
 }
 
 .item-projects {
-  grid-area: 6 / 3 / 8 / 5;
+  grid-area: 10 / 4 / span 2 / span 2;
 }
 
 .item-experience {
@@ -129,6 +129,15 @@ p {
 
 .item-achievements {
   grid-area: 8 / 9 / 8 / 9;
+}
+
+.item-version {
+  grid-area: 6 / 4 / span 1 / span 1;
+  cursor: default !important;
+}
+
+.item-animation {
+  grid-area: 11 / 8 / span 1 / span 1;
 }
 
 .small {
@@ -183,6 +192,23 @@ p {
   line-height: 0px;
   font-size: 12px;
   letter-spacing: 1px;
+}
+
+.tileContent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tileText {
+  padding: 5px;
+  font-weight: 300;
+  font-size: 14px;
 }
 
 .tileIcon {
@@ -308,14 +334,14 @@ p {
   font-size: 14px;
 }
 
-.pageTitle > img {
+.pageTitle>img {
   width: 28px;
   height: 28px;
   margin-left: 7px;
   margin-right: 5px;
 }
 
-.pageTitle > p {
+.pageTitle>p {
   margin: 0px;
 }
 
@@ -354,6 +380,7 @@ p {
   border-bottom-right-radius: 25px;
   padding: 30px;
   transform-style: preserve-3d;
+  margin: 0px 25px;
 }
 
 .inner-element {
@@ -464,8 +491,23 @@ p {
 
 /* Responsive */
 
-/* @media (min-width: 800px) {
-	.mainContainer {
+@media (min-width: 800px) {
+  /* .mainContainer {
     scale: 1.2 !important;
+  } */
+  .item-biography {
+    grid-area: 7 / 10 / span 2 / span 2;
   }
-} */
+
+  .item-projects {
+    grid-area: 6 / 3 / 8 / 5;
+  }
+
+  .item-version {
+    grid-area: 6 / 10 / span 1 / span 1;
+  }
+
+  .item-animation {
+    grid-area: 10 / 7 / span 1 / span 1;
+  }
+}

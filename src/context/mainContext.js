@@ -11,6 +11,7 @@ const { Provider } = MainContext = React.createContext({});
 
 const MainProvider = (props) => {
     const [theme, setTheme] = useState(0);
+    const [homeBottomAnimation, setHomeBottomAnimation] = useState(true);
 
     useEffect(() => {
         if (theme === themes.length) {
@@ -29,7 +30,9 @@ const MainProvider = (props) => {
         <Provider
             value={{
                 theme,
-                setTheme
+                setTheme,
+                homeBottomAnimation,
+                setHomeBottomAnimation
             }}
         >
             {props.children}

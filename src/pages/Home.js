@@ -5,11 +5,14 @@ import React, {
     useContext
 } from 'react';
 
+/* Icons */
 import profilePicture from '../pictures/prof.jpg';
 import Instagram from '../icons/instagram.png';
 import LinkedIn from '../icons/linkedin.png';
 import GitHub from '../icons/github.png';
 import ChatBubble from '../icons/chat-bubble.png';
+import QuestionMark from '../icons/question-mark.png';
+import Mail from '../icons/mail.png';
 import Personalization from '../icons/paint3d.png';
 import Durango from '../icons/durango.png';
 import Folder from '../icons/program-folder.png';
@@ -20,19 +23,47 @@ import Skills from '../icons/skills.png';
 import Input from '../icons/input.png';
 import ByTheNumbers from '../icons/neutral-trading.png';
 
+/* Animations */
 import { FluentRevealEffect } from "fluent-reveal-effect"
 import Zoom from 'react-reveal/Zoom';
 import Slide from 'react-reveal/Slide';
 import Bounce from 'react-reveal/Bounce';
-import Tilt from 'react-parallax-tilt';
+import Fade from 'react-reveal/Fade';
+
+/* Data */
+import skills from '../data/skills';
+import experiences from '../data/experience';
+import byTheNumbers from '../data/byTheNumbers';
 
 /* Context */
 import MainContext from '../context/mainContext';
 
 const Home = ({ history }) => {
-    const { theme, setTheme } = useContext(MainContext);
+    const { theme, setTheme, homeBottomAnimation, setHomeBottomAnimation } = useContext(MainContext);
     // const [theme, setTheme] = useState(0);
     const [iconClassName, setIconClassName] = useState('centerIcon');
+    const [skill, setSkill] = useState('');
+    const [experience, setExperience] = useState('');
+    const [byTheNumber, setByTheNumber] = useState('');
+
+    useEffect(() => {
+        let interval1, interval2, interval3;
+        interval1 = setInterval(() => {
+            setSkill(Math.floor(Math.random() * skills.length));
+        }, 2000);
+        interval2 = setInterval(() => {
+            setExperience(Math.floor(Math.random() * experiences.length));
+        }, 2500);
+        interval3 = setInterval(() => {
+            setByTheNumber(Math.floor(Math.random() * byTheNumbers.length));
+        }, 3000);
+
+        return () => {
+            clearInterval(interval1);
+            clearInterval(interval2);
+            clearInterval(interval3);
+        }
+    }, []);
 
     useEffect(() => {
         let timeout = setTimeout(() => {
@@ -71,7 +102,7 @@ const Home = ({ history }) => {
     return (
         <Zoom
             cascade
-            bottom
+            bottom={homeBottomAnimation}
             duration={1000}
         >
             <div className="mainContainer">
@@ -142,6 +173,20 @@ const Home = ({ history }) => {
                         history.push('/portfolio/bythenumbers');
                     }}
                 >
+                    <div className="tileContent">
+                        <Zoom spy={byTheNumber} cascade>
+                            {
+                                (byTheNumber || byTheNumber === 0)
+                                && <p
+                                    className="tileText"
+                                >
+                                    {
+                                        `${byTheNumbers[byTheNumber].number} | ${byTheNumbers[byTheNumber].description}`
+                                    }
+                                </p>
+                            }
+                        </Zoom>
+                    </div>
                     <p className="tileTitle">By The Numbers</p>
                     <Slide
                         bottom
@@ -156,7 +201,7 @@ const Home = ({ history }) => {
                 </div>
                 <div className="item-contact tile reveal small acrylic">
                     <img
-                        src={ChatBubble}
+                        src={Mail}
                         className="smallIcon"
                         alt="contact"
                     />
@@ -189,6 +234,11 @@ const Home = ({ history }) => {
                         history.push('/portfolio/skills');
                     }}
                 >
+                    <div className="tileContent">
+                        <Zoom spy={skill} cascade>
+                            {(skill || skill === 0) && <p className="tileText">{skills[skill]}</p>}
+                        </Zoom>
+                    </div>
                     <p className="tileTitle">DevSkills</p>
                     <Slide
                         bottom
@@ -220,6 +270,20 @@ const Home = ({ history }) => {
                         history.push('/portfolio/experience');
                     }}
                 >
+                    <div className="tileContent">
+                        <Fade spy={experience} cascade bottom>
+                            {
+                                (experience || experience === 0)
+                                && <p
+                                    className="tileText"
+                                >
+                                    {
+                                        experiences[experience].title
+                                    }
+                                </p>
+                            }
+                        </Fade>
+                    </div>
                     <p className="tileTitle">Experience</p>
                     <Slide
                         bottom
@@ -231,6 +295,23 @@ const Home = ({ history }) => {
                             alt="tile icon"
                         />
                     </Slide>
+                </div>
+                <div className="item-version tile reveal small acrylic">
+                    <div className="tileContent">
+                        <p className="tileText">V1.0</p>
+                    </div>
+                </div>
+                <div
+                    className="item-animation tile reveal small acrylic"
+                    onClick={() => {
+                        setHomeBottomAnimation(!homeBottomAnimation);
+                    }}
+                >
+                    <img
+                        src={QuestionMark}
+                        className="smallIcon"
+                        alt="home animation mode"
+                    />
                 </div>
             </div>
         </Zoom>

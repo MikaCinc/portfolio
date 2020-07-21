@@ -7,6 +7,8 @@ import React, {
 import Tilt from 'react-parallax-tilt';
 import bioPic from '../pictures/bio_pic.jpg';
 
+import HardWorking from '../icons/hard-working.png';
+
 /* Context */
 import MainContext from '../context/mainContext';
 import themes from '../themes';
@@ -32,7 +34,11 @@ const Biography = ({ history }) => {
                 onClick={() => { history.push('/portfolio') }}
             >
                 Back
-                    </button>
+            </button>
+            <div className="pageTitle">
+                <p>Short biography</p>
+                <img src={HardWorking} alt="icon" />
+            </div>
             <div className="inner-element">
                 <img className="bioPic" width="300" height="230" src={bioPic} alt="Terrace"></img>
             </div>
