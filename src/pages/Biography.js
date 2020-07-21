@@ -6,7 +6,6 @@ import React, {
 } from 'react';
 
 import Tilt from 'react-parallax-tilt';
-import Typed from 'react-typed';
 
 import bioPic from '../pictures/bio_pic.jpg';
 import HardWorking from '../icons/hard-working.png';
