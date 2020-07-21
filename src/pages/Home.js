@@ -10,7 +10,6 @@ import profilePicture from '../pictures/prof.jpg';
 import Instagram from '../icons/instagram.png';
 import LinkedIn from '../icons/linkedin.png';
 import GitHub from '../icons/github.png';
-import ChatBubble from '../icons/chat-bubble.png';
 import QuestionMark from '../icons/question-mark.png';
 import Mail from '../icons/mail.png';
 import Personalization from '../icons/paint3d.png';
@@ -18,17 +17,15 @@ import Durango from '../icons/durango.png';
 import Folder from '../icons/program-folder.png';
 import MindMap from '../icons/mind-map.png';
 import HardWorking from '../icons/hard-working.png';
-import SourceCode from '../icons/source-code.png';
 import Skills from '../icons/skills.png';
 import Input from '../icons/input.png';
 import ByTheNumbers from '../icons/neutral-trading.png';
 
 /* Animations */
-import { FluentRevealEffect } from "fluent-reveal-effect"
 import Zoom from 'react-reveal/Zoom';
 import Slide from 'react-reveal/Slide';
-import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
+import RubberBand from 'react-reveal/RubberBand';
 
 /* Data */
 import skills from '../data/skills';
@@ -121,28 +118,44 @@ const Home = ({ history }) => {
                         </Zoom>
                     </div>
                 </div>
-                <div className="item-instagram tile reveal small acrylic">
+                <div className="item-instagram tile reveal small acrylic"
+                    onClick={() => {
+                        window.open('https://www.instagram.com/mikac_inc/', '_blank');
+                    }}
+                >
                     <img
                         src={Instagram}
                         className="smallIcon"
                         alt="instagram"
                     />
                 </div>
-                <div className="item-linkedin tile reveal small acrylic">
+                <div className="item-linkedin tile reveal small acrylic"
+                    onClick={() => {
+                        window.open('https://www.linkedin.com/in/mikacinc/', '_blank');
+                    }}
+                >
                     <img
                         src={LinkedIn}
                         className="smallIcon"
                         alt="linkedin"
                     />
                 </div>
-                <div className="item-github tile reveal small acrylic">
+                <div className="item-github tile reveal small acrylic"
+                    onClick={() => {
+                        window.open('https://github.com/MikaCinc', '_blank');
+                    }}
+                >
                     <img
                         src={GitHub}
                         className="smallIcon"
                         alt="github"
                     />
                 </div>
-                <div className="item-durango tile reveal small acrylic">
+                <div className="item-durango tile reveal small acrylic"
+                    onClick={() => {
+                        window.open('https://durango.rs', '_blank');
+                    }}
+                >
                     <img
                         src={Durango}
                         className="smallIcon"
@@ -156,16 +169,11 @@ const Home = ({ history }) => {
                     }}
                 >
                     <p className="tileTitle">Biography</p>
-                    <Slide
-                        bottom
-                        spy={iconClassName}
-                    >
-                        <img
-                            className={iconClassName}
-                            src={HardWorking}
-                            alt="tile icon"
-                        />
-                    </Slide>
+                    <img
+                        className={'centerIcon'}
+                        src={HardWorking}
+                        alt="tile icon"
+                    />
                 </div>
                 <div
                     className="item-byTheNumbers tile reveal wide acrylic"
@@ -199,7 +207,11 @@ const Home = ({ history }) => {
                         />
                     </Slide>
                 </div>
-                <div className="item-contact tile reveal small acrylic">
+                <div className="item-contact tile reveal small acrylic"
+                    onClick={() => {
+                        window.location.href = "mailto:mihajlo.ls00@outlook.com";
+                    }}
+                >
                     <img
                         src={Mail}
                         className="smallIcon"
@@ -235,11 +247,11 @@ const Home = ({ history }) => {
                     }}
                 >
                     <div className="tileContent">
-                        <Zoom spy={skill} cascade>
+                        <RubberBand spy={skill}>
                             {(skill || skill === 0) && <p className="tileText">{skills[skill]}</p>}
-                        </Zoom>
+                        </RubberBand>
                     </div>
-                    <p className="tileTitle">DevSkills</p>
+                    <p className="tileTitle">Skills</p>
                     <Slide
                         bottom
                         spy={iconClassName}
@@ -251,18 +263,18 @@ const Home = ({ history }) => {
                         />
                     </Slide>
                 </div>
-                <div className="item-projects tile reveal medium acrylic">
+                <div
+                    className="item-projects tile reveal medium acrylic"
+                    onClick={() => {
+                        history.push('/portfolio/projects');
+                    }}
+                >
                     <p className="tileTitle">Projects</p>
-                    <Slide
-                        bottom
-                        spy={iconClassName}
-                    >
-                        <img
-                            className={iconClassName}
-                            src={Folder}
-                            alt="tile icon"
-                        />
-                    </Slide>
+                    <img
+                        className={'centerIcon'}
+                        src={Folder}
+                        alt="tile icon"
+                    />
                 </div>
                 <div
                     className="item-experience tile reveal wide acrylic"

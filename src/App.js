@@ -19,6 +19,7 @@ import Biography from './pages/Biography';
 import ByTheNumbers from './pages/ByTheNumbers';
 import Skills from './pages/Skills';
 import Experience from './pages/Experience';
+import Projects from './pages/Projects';
 
 /* Context */
 import { MainProvider } from './context/mainContext';
@@ -29,6 +30,7 @@ const routes = [
     { path: '/portfolio/bythenumbers', name: 'ByTheNumbers', Component: ByTheNumbers },
     { path: '/portfolio/skills', name: 'Skills', Component: Skills },
     { path: '/portfolio/experience', name: 'Experience', Component: Experience },
+    { path: '/portfolio/projects', name: 'Projects', Component: Projects },
 ];
 
 const App = () => {

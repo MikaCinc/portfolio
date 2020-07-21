@@ -6,6 +6,7 @@ import React, {
 } from 'react';
 
 import Tilt from 'react-parallax-tilt';
+import Fade from 'react-reveal/Fade';
 
 import ByTheNumbersIcon from '../icons/neutral-trading.png';
 
@@ -39,18 +40,20 @@ const ByTheNumbers = ({ history }) => {
                 <img src={ByTheNumbersIcon} alt="icon" />
             </div>
             <div className="inner-element">
-                <div className="flex-wrapper flex-wrapper-byTheNumbers">
-                    {
-                        byTheNumbers.map(({ number, description }) => {
-                            return (
-                                <div>
-                                    <p className="bythenumber">{number}</p>
-                                    <p className="gradientTextLite2">{description}</p>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
+                <Fade cascade bottom>
+                    <div className="flex-wrapper flex-wrapper-byTheNumbers">
+                        {
+                            byTheNumbers.map(({ number, description }) => {
+                                return (
+                                    <div>
+                                        <p className="bythenumber">{number}</p>
+                                        <p className="gradientTextLite2">{description}</p>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </Fade>
             </div>
         </Tilt>
     )
