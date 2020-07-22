@@ -3,7 +3,7 @@
   --sharp-blues: linear-gradient(to bottom left, #00c6fb 0%, #005bea 100%);
   --night-sky: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
   --vicious-stance: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  --phoenix-start: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+  --phoenix-start: linear-gradient(to top right, #f83600 0%, #f9d423 100%);
   --wide-matrix: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
   --premium-dark: linear-gradient(to right, #434343 0%, black 100%);
   --particles-background: var(--sharp-blues);
@@ -382,7 +382,7 @@ p {
   border: 2px solid var(--textColor);
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  padding: 30px;
+  padding: 25px 20px;
   transform-style: preserve-3d;
   margin: 0px 25px;
 }
@@ -407,17 +407,26 @@ p {
 /* Biography */
 
 .bioPic {
-  width: 300px;
-  height: auto;
+  width: auto;
+  max-width: 300px;
+  height: 100%;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
 /* ByTheNumbers */
 
+.flex-wrapper-byTheNumbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .flex-wrapper-byTheNumbers div {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .flex-wrapper-byTheNumbers div p:first-of-type {
