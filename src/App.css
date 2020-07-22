@@ -397,7 +397,7 @@ p {
   overflow-y: auto;
 }
 
-.parallax-effect-glare-scale>p {
+.inner-element>div>p {
   font-size: 18px;
   font-variant: normal !important;
   font-style: normal !important;
@@ -407,9 +407,9 @@ p {
 /* Biography */
 
 .bioPic {
-  width: auto;
+  height: auto;
+  width: 100%;
   max-width: 300px;
-  height: 100%;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
