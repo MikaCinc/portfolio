@@ -16,6 +16,8 @@ import Mastermind from '../icons/brain.png';
 import Memory from '../icons/dice.png';
 import Party from '../icons/party.png';
 import CapitalCities from '../icons/city.png';
+import OldPortfolio from '../icons/old-portfolio.png';
+import Packages from '../icons/packaging.png';
 
 /* Context */
 import MainContext from '../context/mainContext';
@@ -153,6 +155,28 @@ const Projects = ({ history }) => {
                         src={Party}
                         className="smallIcon"
                         alt="party invitation"
+                    />
+                </div>
+            <div className="projects-old-portfolio tile reveal small acrylic"
+            onClick={() => {
+                window.open('https://mikacinc.github.io/portfolio-old/', '_blank');
+            }}
+            >
+                    <img
+                        src={OldPortfolio}
+                        className="smallIcon"
+                        alt="archive old portfolio"
+                    />
+                </div>
+            <div className="projects-package-picker tile reveal small acrylic"
+            onClick={() => {
+                window.open('https://mikacinc.github.io/package-picker/', '_blank');
+            }}
+            >
+                    <img
+                        src={Packages}
+                        className="smallIcon"
+                        alt="package-picker"
                     />
                 </div>
         </div>
