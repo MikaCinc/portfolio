@@ -80,26 +80,66 @@ const App = () => {
                 <Particles
                     canvasClassName="particles"
                     params={{
-                        particles: {
-                            number: {
-                                value: 70,
-                                density: {
-                                    enable: true,
-                                    value_area: 1000,
+                        "particles": {
+                            "number": {
+                                "value": 80,
+                                "density": {
+                                    "enable": true,
+                                    "value_area": 900,
+                                },
+                                "opacity": 0.8
+                            },
+                            "line_linked": {
+                                "enable": true,
+                                "opacity": 0.1
+                            },
+                            "move": {
+                                "direction": "top",
+                                "random": true,
+                                "speed": 1,
+                                "out_mode": "out"
+                            },
+                            "size": {
+                                "value": 4,
+                                "random": true,
+                                "anim": {
+                                    "speed": 4,
+                                    "size_min": 0.3
                                 }
                             },
-                            /* color: {
-                                value: themes[theme][3]
-                            }, */
-                        },
-                        /* interactivity: {
-                            events: {
-                                onhover: {
-                                    enable: true,
-                                    mode: "repulse"
+                            "opacity": {
+                                "anim": {
+                                    "enable": true,
+                                    "speed": 1,
+                                    "opacity_min": 0.2
                                 }
                             }
-                        } */
+                        },
+                        // "interactivity": {
+                        //     "events": {
+                        //         "onhover": {
+                        //             "enable": true,
+                        //             "mode": "bubble"
+                        //         },
+                        //         "onclick": {
+                        //             "enable": true,
+                        //             "mode": "repulse"
+                        //         }
+                        //     },
+                        //     "modes": {
+                        //         "bubble": {
+                        //             "distance": 250,
+                        //             "duration": 2,
+                        //             "size": 0,
+                        //             "opacity": 0
+                        //         },
+                        //         "repulse": {
+                        //             "distance": 400,
+                        //             "duration": 4
+                        //         }
+                        //     }
+                        // },
+                        "retina_detect": true
                     }}
                 />
             </MainProvider>
