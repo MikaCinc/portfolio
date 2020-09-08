@@ -310,7 +310,7 @@ const Home = ({ history }) => {
                 </div>
                 <div className="item-version tile reveal small acrylic">
                     <div className="tileContent">
-                        <p className="tileText">V1.1</p>
+                        <p className="tileText">V1.2</p>
                     </div>
                 </div>
                 <div
