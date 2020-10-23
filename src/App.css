@@ -240,9 +240,9 @@ p {
   position: relative;
 }
 
-.reveal:hover::before {
-  /* background-color: hsla(240, 0%, 50%, 0.5); */
-}
+/* .reveal:hover::before {
+  background-color: hsla(240, 0%, 50%, 0.5);
+} */
 
 .reveal::before {
   content: '';
