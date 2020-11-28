@@ -27,12 +27,12 @@ import themes from './themes';
 import MainContext from './context/mainContext';
 
 const routes = [
-  { path: '/portfolio', name: 'Home', Component: Home },
-  { path: '/portfolio/biography', name: 'Biography', Component: Biography },
-  { path: '/portfolio/bythenumbers', name: 'ByTheNumbers', Component: ByTheNumbers },
-  { path: '/portfolio/skills', name: 'Skills', Component: Skills },
-  { path: '/portfolio/experience', name: 'Experience', Component: Experience },
-  { path: '/portfolio/projects', name: 'Projects', Component: Projects },
+  { path: '/', name: 'Home', Component: Home },
+  { path: '/biography', name: 'Biography', Component: Biography },
+  { path: '/bythenumbers', name: 'ByTheNumbers', Component: ByTheNumbers },
+  { path: '/skills', name: 'Skills', Component: Skills },
+  { path: '/experience', name: 'Experience', Component: Experience },
+  { path: '/projects', name: 'Projects', Component: Projects },
 ];
 
 const App = () => {
@@ -75,12 +75,11 @@ const App = () => {
   }
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <MainProvider>
         <Switch>
-          <Route exact path="/" render={() => <Redirect to="/portfolio" />} />
-          <Route path="/portfolio" component={AppStack} />
-          <Route path="/portfolio/:page?" component={AppStack} />
+          <Route exact path="/:page?" component={AppStack} />
+          <Route exact path="/" component={AppStack} />
         </Switch>
         <MainContext.Consumer>
           {

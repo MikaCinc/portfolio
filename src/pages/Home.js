@@ -164,7 +164,7 @@ const Home = ({ history }) => {
                 <div
                     className="item-biography medium tile reveal acrylic"
                     onClick={() => {
-                        history.push('/portfolio/biography');
+                        history.push('/biography');
                     }}
                 >
                     <p className="tileTitle">Biography</p>
@@ -177,7 +177,7 @@ const Home = ({ history }) => {
                 <div
                     className="item-byTheNumbers tile reveal wide acrylic"
                     onClick={() => {
-                        history.push('/portfolio/bythenumbers');
+                        history.push('/bythenumbers');
                     }}
                 >
                     <div className="tileContent">
@@ -242,7 +242,7 @@ const Home = ({ history }) => {
                 <div
                     className="item-skills tile reveal medium acrylic"
                     onClick={() => {
-                        history.push('/portfolio/skills');
+                        history.push('/skills');
                     }}
                 >
                     <div className="tileContent">
@@ -265,7 +265,7 @@ const Home = ({ history }) => {
                 <div
                     className="item-projects tile reveal medium acrylic"
                     onClick={() => {
-                        history.push('/portfolio/projects');
+                        history.push('/projects');
                     }}
                 >
                     <p className="tileTitle">Projects</p>
@@ -278,7 +278,7 @@ const Home = ({ history }) => {
                 <div
                     className="item-experience tile reveal wide acrylic"
                     onClick={() => {
-                        history.push('/portfolio/experience');
+                        history.push('/experience');
                     }}
                 >
                     <div className="tileContent">

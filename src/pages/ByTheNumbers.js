@@ -28,7 +28,7 @@ const ByTheNumbers = ({ history }) => {
         >
             <button
                 className="backButton"
-                onClick={() => { history.push('/portfolio') }}
+                onClick={() => { history.push('/') }}
             >
                 Back
             </button>

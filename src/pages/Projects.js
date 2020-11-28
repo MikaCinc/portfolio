@@ -54,7 +54,7 @@ const Projects = ({ history }) => {
             >
                 <button
                     className="backButtonProjects"
-                    onClick={() => { history.push('/portfolio') }}
+                    onClick={() => { history.push('/') }}
                 >
                     Back
             </button>
