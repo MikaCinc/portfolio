@@ -170,15 +170,18 @@ p {
 
 .tile {
   position: relative;
-  border-radius: 5px;
+  border-radius: 4px;
   margin: 3px;
   /* background: var(--vicious-stance); */
   background-color: var(--acrylicColor);
   color: #fff;
   border: none;
   overflow: hidden;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   cursor: pointer;
+  user-select: none;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23), inset 0px 7px 7px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23), inset 0px 7px 7px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23), inset 0px 7px 7px -7px rgba(0, 0, 0, 0.75);
 }
 
 .tile:active {
@@ -252,7 +255,7 @@ p {
   bottom: 0;
   left: 0;
   border: 2px solid var(--revealColor);
-  border-radius: 5px;
+  border-radius: 4px;
   mask-image: radial-gradient(circle closest-side, white, transparent);
   mask-origin: border-box;
   mask-position: inherit;
