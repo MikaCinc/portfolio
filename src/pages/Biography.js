@@ -1,7 +1,4 @@
 import React, {
-    useEffect,
-    Fragment,
-    useState,
     useContext
 } from 'react';
 

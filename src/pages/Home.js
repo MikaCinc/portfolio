@@ -1,6 +1,5 @@
 import React, {
     useEffect,
-    Fragment,
     useState,
     useContext
 } from 'react';
@@ -107,7 +106,7 @@ const Home = ({ history }) => {
                     <img
                         src={profilePicture}
                         className="profilePicture"
-                        alt="profile picture"
+                        alt="profilePicture"
                     />
                     <div className="profile-info-div">
                         <Zoom cascade delay={800}>
@@ -310,7 +309,7 @@ const Home = ({ history }) => {
                 </div>
                 <div className="item-version tile reveal small acrylic">
                     <div className="tileContent">
-                        <p className="tileText">V1.2</p>
+                        <p className="tileText">V1.3</p>
                     </div>
                 </div>
                 <div

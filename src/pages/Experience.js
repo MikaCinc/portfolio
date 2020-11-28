@@ -1,7 +1,4 @@
 import React, {
-    useEffect,
-    Fragment,
-    useState,
     useContext
 } from 'react';
 
@@ -51,6 +48,8 @@ const Experience = ({ history }) => {
                                         <p>{date}</p>
                                     </div>
                                 )
+
+                                return null;
                             })
                         }
                     </div>

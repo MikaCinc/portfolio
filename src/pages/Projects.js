@@ -1,11 +1,7 @@
 import React, {
     useEffect,
-    Fragment,
-    useState,
-    useContext
 } from 'react';
 
-import Tilt from 'react-parallax-tilt';
 import Fade from 'react-reveal/Fade';
 
 import SourceCode from '../icons/source-code.png';
@@ -20,8 +16,8 @@ import OldPortfolio from '../icons/old-portfolio.png';
 import Packages from '../icons/packaging.png';
 
 /* Context */
-import MainContext from '../context/mainContext';
-import themes from '../themes';
+/* import MainContext from '../context/mainContext';
+import themes from '../themes'; */
 
 const Projects = ({ history }) => {
     useEffect(() => {
@@ -109,7 +105,7 @@ const Projects = ({ history }) => {
                 <p className="tileTitle">Project NEON</p>
                 <div className="tileContent">
                     <Fade cascade>
-                        <p className="tileText"> //NEON/ </p>
+                        <p className="tileText"> {'//NEON/'} </p>
                     </Fade>
                 </div>
             </div>
