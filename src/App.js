@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 
 /* Router */
@@ -23,6 +23,8 @@ import Projects from './pages/Projects';
 
 /* Context */
 import { MainProvider } from './context/mainContext';
+import themes from './themes';
+import MainContext from './context/mainContext';
 
 const routes = [
     { path: '/portfolio', name: 'Home', Component: Home },
@@ -34,6 +36,8 @@ const routes = [
 ];
 
 const App = () => {
+
+    const { theme } = useContext(MainContext);
 
     const AppStack = ({ history }) => {
         return (
@@ -76,6 +80,7 @@ const App = () => {
                 <Switch>
                     <Route exact path="/" render={() => <Redirect to="/portfolio" />} />
                     <Route path="/portfolio" component={AppStack} />
+                    <Route path="/portfolio/:page?" component={AppStack} />
                 </Switch>
                 <Particles
                     canvasClassName="particles"
@@ -113,6 +118,9 @@ const App = () => {
                                     "speed": 1,
                                     "opacity_min": 0.2
                                 }
+                            },
+                            "color": {
+                                "value": "#FFFFFF"
                             }
                         },
                         // "interactivity": {
