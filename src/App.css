@@ -592,7 +592,7 @@ p {
 }
 
 .projects-supreme {
-  grid-area: 5 / 1 / span 2 / span 2;
+  grid-area: 6 / 3 / span 1 / span 1;
 }
 
 .projects-neon {
@@ -621,6 +621,10 @@ p {
 
 .projects-package-picker {
   grid-area: 4 / 2 / span 1 / span 1;
+}
+
+.projects-servierbar {
+  grid-area: 5 / 1 / span 2 / span 2;
 }
 
 /* Responsive */
