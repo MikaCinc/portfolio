@@ -140,11 +140,6 @@ p {
   grid-area: 11 / 8 / span 1 / span 1;
 }
 
-.small {
-  width: 44px;
-  height: 44px;
-}
-
 .smallText {
   font-size: 12px;
 }
@@ -156,6 +151,11 @@ p {
   top: 50%;
   bottom: 50%;
   transform: translate(-50%, -50%);
+}
+
+.small {
+  width: 43px;
+  height: 43px;
 }
 
 .medium {
@@ -171,7 +171,7 @@ p {
 .tile {
   position: relative;
   border-radius: 4px;
-  margin: 3px;
+  margin: 0px;
   /* background: var(--vicious-stance); */
   background-color: var(--acrylicColor);
   color: #fff;
