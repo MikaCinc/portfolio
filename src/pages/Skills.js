@@ -62,7 +62,7 @@ const Skills = ({ history }) => {
                                 <span>Chess</span>
                             </p>
                         </div>
-                        <div class="even-skill-group">
+                        <div className="even-skill-group">
                             <p>
                                 <span>Student of the year 2015.</span>
                                 <span>A Certificate of Excellence 'Vuk Karadžić'</span>

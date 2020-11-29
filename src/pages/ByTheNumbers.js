@@ -40,9 +40,9 @@ const ByTheNumbers = ({ history }) => {
                 <Fade cascade bottom>
                     <div className="flex-wrapper flex-wrapper-byTheNumbers">
                         {
-                            byTheNumbers.map(({ number, description }) => {
+                            byTheNumbers.map(({ number, description }, index) => {
                                 return (
-                                    <div>
+                                    <div key={index}>
                                         <p className="bythenumber">{number}</p>
                                         <p className="gradientTextLite2">{description}</p>
                                     </div>
