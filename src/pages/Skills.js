@@ -25,6 +25,9 @@ const Skills = ({ history }) => {
             gyroscope={true}
             glarePosition={'all'}
             glareColor={themes[theme][3]}
+            tiltMaxAngleX={10}
+            tiltMaxAngleY={10}
+            glareMaxOpacity={0.3}
         >
             <button
                 className="backButton"

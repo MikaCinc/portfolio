@@ -1,9 +1,5 @@
-import React, {
-    useEffect,
-} from 'react';
-
+import React from 'react';
 import Fade from 'react-reveal/Fade';
-
 import SourceCode from '../icons/source-code.png';
 import Durango from '../icons/durango.png';
 import PropCentral from '../icons/propcentral.png';
@@ -16,36 +12,7 @@ import CapitalCities from '../icons/city.png';
 import OldPortfolio from '../icons/old-portfolio.png';
 import Packages from '../icons/packaging.png';
 
-/* Context */
-/* import MainContext from '../context/mainContext';
-import themes from '../themes'; */
-
 const Projects = ({ history }) => {
-    useEffect(() => {
-        let revealTimeout = setTimeout(() => {
-            callback();
-        }, 1000);
-
-        let callback = () => {
-            const maskSize = 300;
-            const elements = Array.from(document.querySelectorAll('.reveal'));
-
-            document.addEventListener('mousemove', (event) => {
-                elements.forEach((element) => {
-                    const { top, left } = element.getBoundingClientRect();
-                    const x = event.pageX - left - maskSize / 2;
-                    const y = event.pageY - top - maskSize / 2;
-
-                    element.style.webkitMaskPosition = `${x}px ${y}px`;
-                    element.style.webkitMaskSize = `${maskSize}px ${maskSize}px`;
-                });
-            });
-        }
-
-        return () => {
-            clearTimeout(revealTimeout);
-        }
-    }, [])
 
     return (
         <Fade bottom cascade>

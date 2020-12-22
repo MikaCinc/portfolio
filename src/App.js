@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import './App.css';
 
 /* Router */
@@ -6,7 +6,7 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Redirect,
+  // Redirect,
 } from "react-router-dom";
 
 /* Animations */
@@ -35,44 +35,71 @@ const routes = [
   { path: '/projects', name: 'Projects', Component: Projects },
 ];
 
+const AppStack = ({ history }) => {
+
+  useEffect(() => {
+    let revealTimeout = setTimeout(() => {
+      callback();
+    }, 500);
+
+    let callback = () => {
+      const maskSize = 250;
+      const elements = Array.from(document.querySelectorAll('.reveal'));
+      
+      document.addEventListener('mousemove', (event) => {
+        elements.forEach((element) => {
+          const { top, left } = element.getBoundingClientRect();
+          const x = event.pageX - left - maskSize / 2;
+          const y = event.pageY - top - maskSize / 2;
+          
+          element.style.webkitMaskPosition = `${x}px ${y}px`;
+          element.style.webkitMaskSize = `${maskSize}px ${maskSize}px`;
+        });
+      });
+    }
+
+    return () => {
+      clearTimeout(revealTimeout);
+    }
+  }, [history.location.pathname]);
+
+  return (
+    <div className="container">
+      <TransitionGroup>
+        <CSSTransition
+          in={true}
+          timeout={300}
+          classNames="page"
+          unmountOnExit
+          key={history.location.key} // Bez ovoga neće!
+        >
+          <Switch location={history.location}>
+            {
+              routes.map(({ path, Component }) => (
+                <Route
+                  key={path}
+                  exact
+                  path={path}
+                  render={
+                    ({ match }) => (
+                      <div className="page">
+                        <Component history={history} />
+                      </div>
+                    )
+                  }
+                />
+              ))
+            }
+          </Switch>
+        </CSSTransition>
+      </TransitionGroup>
+    </div>
+  )
+}
+
 const App = () => {
 
   // const { theme } = useContext(MainContext);
-
-  const AppStack = ({ history }) => {
-    return (
-      <div className="container">
-        <TransitionGroup>
-          <CSSTransition
-            in={true}
-            timeout={300}
-            classNames="page"
-            unmountOnExit
-            key={history.location.key} // Bez ovoga neće!
-          >
-            <Switch location={history.location}>
-              {
-                routes.map(({ path, Component }) => (
-                  <Route
-                    key={path}
-                    exact
-                    path={path}
-                    render={
-                      ({ match }) => (
-                        <div className="page">
-                          <Component history={history} />
-                        </div>
-                      )
-                    }
-                  />
-                ))
-              }
-            </Switch>
-          </CSSTransition>
-        </TransitionGroup>
-      </div>
-    )
-  }
 
   return (
     <Router basename={process.env.PUBLIC_URL}>

@@ -388,7 +388,7 @@ p {
   border-bottom-right-radius: 25px;
   padding: 25px 20px;
   transform-style: preserve-3d;
-  margin: 0px 25px;
+  margin: 0px 35px;
 }
 
 .inner-element {
@@ -397,7 +397,7 @@ p {
   justify-content: center;
   align-items: center;
   color: var(--textColor);
-  transform: translateZ(60px);
+  transform: translateZ(45px);
   overflow-y: auto;
 }
 
@@ -547,6 +547,27 @@ p {
   font-weight: 600;
 }
 
+.icon-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px;
+  transform: translateZ(10px);
+  z-index: 3;
+}
+
+.icon-button-wrapper>img {
+  width: 24px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.icon-button-wrapper>p {
+  margin: 0px;
+}
+
 /* Projects */
 
 .projectsGrid {
@@ -572,6 +593,7 @@ p {
   padding: 10px;
   grid-area: 1 / 5 / span 1 / span 1;
   margin-left: 5px;
+  transition-duration: 0.2s;
 }
 
 .backButtonProjects:hover {

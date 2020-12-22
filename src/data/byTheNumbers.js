@@ -4,12 +4,8 @@ const byTheNumbers = [
         description: 'Years of WebDev experience'
     },
     {
-        number: '316',
-        description: 'Average working hours for 3 months'
-    },
-    {
         number: '>40',
-        description: 'Diplomas + Achievements'
+        description: 'Diplomas & Achievements'
     },
     {
         number: '31',
@@ -24,8 +20,12 @@ const byTheNumbers = [
         description: 'Republic competitions won'
     },
     {
-        number: '11',
+        number: '12',
         description: 'Projects he worked on'
+    },
+    {
+        number: '316',
+        description: 'Average working hours for 3 months'
     },
 ];
 

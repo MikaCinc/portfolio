@@ -66,7 +66,7 @@ const Home = ({ history }) => {
             setIconClassName('tileIcon');
         }, 2000);
 
-        let revealTimeout = setTimeout(() => {
+        /* let revealTimeout = setTimeout(() => {
             callback();
         }, 1000);
 
@@ -85,13 +85,13 @@ const Home = ({ history }) => {
                 });
             });
         }
-
+ */
         // document.addEventListener('DOMContentLoaded', callback);
 
         return () => {
             // document.removeEventListener('DOMContentLoaded', callback);
             clearTimeout(timeout);
-            clearTimeout(revealTimeout);
+            // clearTimeout(revealTimeout);
         }
     }, [])
 
@@ -309,7 +309,7 @@ const Home = ({ history }) => {
                 </div>
                 <div className="item-version tile reveal small acrylic">
                     <div className="tileContent">
-                        <p className="tileText">V1.3</p>
+                        <p className="tileText">V1.4</p>
                     </div>
                 </div>
                 <div
