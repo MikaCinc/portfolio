@@ -398,7 +398,7 @@ p {
   justify-content: center;
   align-items: center;
   color: var(--textColor);
-  transform: translateZ(45px);
+  transform: translateZ(40px);
   overflow-y: auto;
 }
 
@@ -417,6 +417,13 @@ p {
   max-width: 300px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
+  margin-top: 5px;
+}
+
+.bioParagraph {
+  transform: translateZ(0px);
+  font-size: 18px;
+  text-align: justify;
 }
 
 /* ByTheNumbers */

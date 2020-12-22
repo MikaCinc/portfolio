@@ -66,32 +66,8 @@ const Home = ({ history }) => {
             setIconClassName('tileIcon');
         }, 2000);
 
-        /* let revealTimeout = setTimeout(() => {
-            callback();
-        }, 1000);
-
-        let callback = () => {
-            const maskSize = 300;
-            const elements = Array.from(document.querySelectorAll('.reveal'));
-
-            document.addEventListener('mousemove', (event) => {
-                elements.forEach((element) => {
-                    const { top, left } = element.getBoundingClientRect();
-                    const x = event.pageX - left - maskSize / 2;
-                    const y = event.pageY - top - maskSize / 2;
-
-                    element.style.webkitMaskPosition = `${x}px ${y}px`;
-                    element.style.webkitMaskSize = `${maskSize}px ${maskSize}px`;
-                });
-            });
-        }
- */
-        // document.addEventListener('DOMContentLoaded', callback);
-
         return () => {
-            // document.removeEventListener('DOMContentLoaded', callback);
             clearTimeout(timeout);
-            // clearTimeout(revealTimeout);
         }
     }, [])
 

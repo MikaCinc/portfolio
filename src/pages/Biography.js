@@ -20,7 +20,7 @@ const Biography = ({ history }) => {
             className="parallax-effect-glare-scale"
             perspective={5000}
             glareEnable={true}
-            scale={1.05}
+            scale={1}
             gyroscope={true}
             glarePosition={'all'}
             glareColor={themes[theme][3]}
@@ -41,9 +41,9 @@ const Biography = ({ history }) => {
             <div className="inner-element">
                 <div className="flex-wrapper">
                     <img className="bioPic" width="300" height="230" src={bioPic} alt="Terrace"></img>
-                    <p>{bio}</p>
                 </div>
             </div>
+            <p className="bioParagraph">{bio}</p>
         </Tilt>
     )
 }

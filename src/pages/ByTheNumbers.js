@@ -20,7 +20,7 @@ const ByTheNumbers = ({ history }) => {
             className="parallax-effect-glare-scale"
             perspective={5000}
             glareEnable={true}
-            scale={1.05}
+            scale={1}
             gyroscope={true}
             glarePosition={'all'}
             glareColor={themes[theme][3]}
