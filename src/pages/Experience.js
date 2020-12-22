@@ -42,7 +42,7 @@ const Experience = ({ history }) => {
                 Back
             </button>
             <div className="pageTitle">
-                <p>Experience & Volunteer</p>
+                <h1>Experience & Volunteer</h1>
                 <img src={Input} alt="icon" />
             </div>
             <div className="inner-element">

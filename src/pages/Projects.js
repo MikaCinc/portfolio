@@ -26,7 +26,7 @@ const Projects = ({ history }) => {
                     Back
             </button>
                 <div className="pageTitle pageTitleProjects">
-                    <p>Projects</p>
+                    <h1>Projects</h1>
                     <img src={SourceCode} alt="icon" />
                 </div>
                 <div className="projects-mastermind tile reveal small acrylic"

@@ -35,7 +35,7 @@ const Biography = ({ history }) => {
                 Back
             </button>
             <div className="pageTitle">
-                <p>Short biography</p>
+                <h1>Short biography</h1>
                 <img src={HardWorking} alt="icon" />
             </div>
             <div className="inner-element">

@@ -35,7 +35,7 @@ const Skills = ({ history }) => {
                 Back
             </button>
             <div className="pageTitle">
-                <p>Skills & Interests</p>
+                <h1>Skills & Interests</h1>
                 <img src={skillsIcon} alt="icon" />
             </div>
             <div className="inner-element">

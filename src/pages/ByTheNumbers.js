@@ -35,7 +35,7 @@ const ByTheNumbers = ({ history }) => {
                 Back
             </button>
             <div className="pageTitle">
-                <p>By the numbers</p>
+                <h1>By the numbers</h1>
                 <img src={ByTheNumbersIcon} alt="icon" />
             </div>
             <div className="inner-element">
