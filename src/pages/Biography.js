@@ -20,7 +20,6 @@ const Biography = ({ history }) => {
             className="parallax-effect-glare-scale"
             perspective={5000}
             glareEnable={true}
-            glareMaxOpacity={0.45}
             scale={1.05}
             gyroscope={true}
             glarePosition={'all'}
