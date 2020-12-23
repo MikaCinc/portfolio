@@ -40,10 +40,10 @@ const Biography = ({ history }) => {
             </div>
             <div className="inner-element">
                 <div className="flex-wrapper">
-                    <img className="bioPic" width="300" height="230" src={bioPic} alt="Terrace"></img>
+                    <img className="bioPic" width="300" height="230" src={bioPic} alt="Mihajlo on Balkon"></img>
+                    <p className="bioParagraph">{bio}</p>
                 </div>
             </div>
-            <p className="bioParagraph">{bio}</p>
         </Tilt>
     )
 }

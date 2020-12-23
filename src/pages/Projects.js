@@ -15,7 +15,11 @@ import Packages from '../icons/packaging.png';
 const Projects = ({ history }) => {
 
     return (
-        <Fade bottom cascade>
+        <Fade
+            bottom
+            cascade
+            duration={700}
+        >
             <div
                 className="projectsGrid"
             >

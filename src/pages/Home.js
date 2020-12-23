@@ -20,6 +20,9 @@ import Skills from '../icons/skills.png';
 import Input from '../icons/input.png';
 import ByTheNumbers from '../icons/neutral-trading.png';
 
+/* Components */
+// import Badge from '../Components/Badge';
+
 /* Animations */
 import Zoom from 'react-reveal/Zoom';
 import Slide from 'react-reveal/Slide';
@@ -75,7 +78,7 @@ const Home = ({ history }) => {
         <Zoom
             cascade
             bottom={homeBottomAnimation}
-            duration={1000}
+            duration={850}
         >
             <div className="mainContainer">
                 <div className={`item-profile-picture tile reveal wide acrylic`}>
@@ -209,6 +212,7 @@ const Home = ({ history }) => {
 
                     }}
                 >
+                    {/* <Badge label="soon" /> */}
                     <img
                         src={MindMap}
                         className="smallIcon"

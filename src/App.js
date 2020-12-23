@@ -43,7 +43,7 @@ const AppStack = ({ history }) => {
     }, 500);
 
     let callback = () => {
-      const maskSize = 250;
+      const maskSize = 200;
       const elements = Array.from(document.querySelectorAll('.reveal'));
       
       document.addEventListener('mousemove', (event) => {
@@ -68,7 +68,7 @@ const AppStack = ({ history }) => {
       <TransitionGroup>
         <CSSTransition
           in={true}
-          timeout={300}
+          timeout={250}
           classNames="page"
           unmountOnExit
           key={history.location.key} // Bez ovoga neće!
@@ -118,7 +118,7 @@ const App = () => {
                     "value": 80,
                     "density": {
                       "enable": true,
-                      "value_area": 1000,
+                      "value_area": 1500,
                     },
                     "opacity": 0.8
                   },
