@@ -10,6 +10,7 @@
   --revealColor: white;
   --acrylicColor: rgba(0, 0, 0, 0.6);
   --textColor: black;
+  --secondaryColor: orangered;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
@@ -450,14 +451,14 @@ p {
 .flex-wrapper-byTheNumbers div p:last-of-type {
   flex: 3;
   text-align: left;
-  border-left: 4px solid var(--textColor);
+  border-left: 4px solid var(--secondaryColor);
   padding-left: 15px;
   font-size: 18px;
 }
 
 .bythenumber {
   font-size: 24px;
-  color: cyan;
+  color: var(--secondaryColor);
   display: inline-block;
 }
 
@@ -465,7 +466,7 @@ p {
   /* width: max-content; A width bug on Bz The numbers page */
   margin-left: auto;
   margin-right: auto;
-  background: linear-gradient(45deg, var(--textColor), cyan, cyan);
+  background: linear-gradient(45deg, var(--textColor), var(--textColor));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -489,7 +490,7 @@ p {
 
 .flex-wrapper-skills div:not(.even-skill-group) p:first-of-type {
   flex: 1;
-  color: orangered;
+  color: var(--secondaryColor);
   font-size: 22px;
   text-align: right;
   padding-right: 15px;
@@ -501,7 +502,7 @@ p {
   text-align: left;
   padding-left: 15px;
   font-size: 18px;
-  border-left: 4px solid orangered;
+  border-left: 4px solid var(--secondaryColor);
   color: #0f0;
 }
 
@@ -511,7 +512,7 @@ p {
   font-size: 18px;
   text-align: right;
   padding-right: 15px;
-  border-right: 4px solid orangered;
+  border-right: 4px solid var(--secondaryColor);
 }
 
 .flex-wrapper-skills div.even-skill-group p:last-of-type {
@@ -520,7 +521,7 @@ p {
   text-align: left;
   padding-left: 15px;
   font-size: 22px;
-  color: orangered;
+  color: var(--secondaryColor);
 }
 
 /* Experience */
@@ -528,6 +529,7 @@ p {
 .flex-wrapper-experience div {
   display: flex;
   align-items: center;
+  /* text-shadow: 0.5px 0.5px  var(--textColor); */
 }
 
 .flex-wrapper-experience div p:first-of-type {
@@ -535,12 +537,12 @@ p {
   color: yellow;
   text-align: right;
   padding-right: 15px;
-  border-right: 4px solid yellow;
+  border-right: 4px solid var(--secondaryColor);
 }
 
 .flex-wrapper-experience div p:last-of-type {
   flex: 1;
-  color: cyan;
+  color: var(--textColor);
   text-align: left;
   padding-left: 15px;
   font-size: 18px;
@@ -548,11 +550,11 @@ p {
 
 .gradientTextLite4 {
   display: inline-block;
-  background: linear-gradient(to right, cyan, yellow);
+  background: linear-gradient(to right, var(--secondaryColor), var(--secondaryColor));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .icon-button-wrapper {

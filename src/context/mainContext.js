@@ -22,6 +22,7 @@ const MainProvider = (props) => {
     document.documentElement.style.setProperty('--revealColor', themes[theme][1]);
     document.documentElement.style.setProperty('--acrylicColor', themes[theme][2]);
     document.documentElement.style.setProperty('--textColor', themes[theme][3]);
+    document.documentElement.style.setProperty('--secondaryColor', themes[theme][4]);
     // setTileColor('acrylic');
   }, [theme])
 
