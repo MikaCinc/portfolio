@@ -118,7 +118,7 @@ const App = () => {
                     "value": 80,
                     "density": {
                       "enable": true,
-                      "value_area": 1500,
+                      "value_area": 3500,
                     },
                     "opacity": 0.8
                   },
