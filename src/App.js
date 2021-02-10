@@ -1,4 +1,8 @@
-import React, { useEffect } from 'react';
+import React, {
+  useEffect,
+  // Suspense,
+  // lazy
+} from 'react';
 import './App.css';
 
 /* Router */
@@ -14,6 +18,13 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Particles from 'react-particles-js';
 
 /* Pages */
+/* const Home = lazy(() => import('./pages/Home'));
+const Biography = lazy(() => import('./pages/Biography'));
+const ByTheNumbers = lazy(() => import('./pages/ByTheNumbers'));
+const Skills = lazy(() => import('./pages/Skills'));
+const Experience = lazy(() => import('./pages/Experience'));
+const Projects = lazy(() => import('./pages/Projects')); */
+
 import Home from './pages/Home';
 import Biography from './pages/Biography';
 import ByTheNumbers from './pages/ByTheNumbers';
@@ -45,13 +56,13 @@ const AppStack = ({ history }) => {
     let callback = () => {
       const maskSize = 200;
       const elements = Array.from(document.querySelectorAll('.reveal'));
-      
+
       document.addEventListener('mousemove', (event) => {
         elements.forEach((element) => {
           const { top, left } = element.getBoundingClientRect();
           const x = event.pageX - left - maskSize / 2;
           const y = event.pageY - top - maskSize / 2;
-          
+
           element.style.webkitMaskPosition = `${x}px ${y}px`;
           element.style.webkitMaskSize = `${maskSize}px ${maskSize}px`;
         });
@@ -103,6 +114,7 @@ const App = () => {
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
+      {/* <Suspense fallback={<div>Loading...</div>}> */}
       <MainProvider>
         <Switch>
           <Route exact path="/:page?" component={AppStack} />
@@ -192,6 +204,7 @@ const App = () => {
           }
         </MainContext.Consumer>
       </MainProvider>
+      {/* </Suspense> */}
     </Router>
   );
 }
