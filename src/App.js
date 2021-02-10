@@ -120,6 +120,7 @@ const App = () => {
         <Switch>
           <Route exact path="/:page?" component={AppStack} />
           <Route exact path="/" component={AppStack} />
+          <Route exact path="*" component={AppStack} />
         </Switch>
         <MainContext.Consumer>
           {
