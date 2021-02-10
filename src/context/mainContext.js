@@ -9,7 +9,7 @@ let MainContext;
 const { Provider } = MainContext = React.createContext({});
 
 const MainProvider = (props) => {
-  const [theme, setTheme] = useState(0);
+  const [theme, setTheme] = useState(1);
   const [homeBottomAnimation, setHomeBottomAnimation] = useState(true);
 
   useEffect(() => {

@@ -49,19 +49,20 @@ const routes = [
 const AppStack = ({ history }) => {
 
   useEffect(() => {
+    const maskSize = 230;
+    const halfMask = maskSize / 2;
+
     let revealTimeout = setTimeout(() => {
       callback();
     }, 500);
 
     let callback = () => {
-      const maskSize = 200;
       const elements = Array.from(document.querySelectorAll('.reveal'));
-
       document.addEventListener('mousemove', (event) => {
         elements.forEach((element) => {
           const { top, left } = element.getBoundingClientRect();
-          const x = event.pageX - left - maskSize / 2;
-          const y = event.pageY - top - maskSize / 2;
+          const x = event.pageX - left - halfMask;
+          const y = event.pageY - top - halfMask;
 
           element.style.webkitMaskPosition = `${x}px ${y}px`;
           element.style.webkitMaskSize = `${maskSize}px ${maskSize}px`;
@@ -130,7 +131,7 @@ const App = () => {
                     "value": 80,
                     "density": {
                       "enable": true,
-                      "value_area": 3500,
+                      "value_area": 4000,
                     },
                     "opacity": 0.8
                   },
