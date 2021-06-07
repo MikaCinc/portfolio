@@ -24,6 +24,8 @@ import ByTheNumbers from '../icons/neutral-trading.png';
 // import Badge from '../Components/Badge';
 
 /* Animations */
+// import TransitionGroup from 'react-transition-group/TransitionGroup';
+
 import Zoom from 'react-reveal/Zoom';
 import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
@@ -52,7 +54,7 @@ const Home = ({ history }) => {
         }, 2000);
         interval2 = setInterval(() => {
             setExperience(Math.floor(Math.random() * experiences.length));
-        }, 2500);
+        }, 3500);
         interval3 = setInterval(() => {
             setByTheNumber(Math.floor(Math.random() * byTheNumbers.length));
         }, 3000);
@@ -91,7 +93,7 @@ const Home = ({ history }) => {
                         <Zoom cascade delay={800}>
                             <p>Mihajlo</p>
                         </Zoom>
-                        <Zoom cascade delay={800}>
+                        <Zoom cascade delay={950}>
                             <p>Marjanović</p>
                         </Zoom>
                     </div>
@@ -262,10 +264,15 @@ const Home = ({ history }) => {
                     }}
                 >
                     <div className="tileContent">
-                        <Fade spy={experience} cascade bottom>
+                        <Fade
+                            spy={experience}
+                            bottom
+                            exit
+                            cascade
+                        >
                             {
-                                (experience || experience === 0)
-                                && <p
+                                (experience || experience === 0) &&
+                                <p
                                     className="tileText"
                                 >
                                     {
@@ -289,7 +296,7 @@ const Home = ({ history }) => {
                 </div>
                 <div className="item-version tile reveal small acrylic">
                     <div className="tileContent">
-                        <p className="tileText">V1.5.1</p>
+                        <p className="tileText">V1.5.2</p>
                     </div>
                 </div>
                 <div
