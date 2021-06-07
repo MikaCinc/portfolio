@@ -20,7 +20,7 @@ const byTheNumbers = [
         description: 'Republic competitions won'
     },
     {
-        number: '12',
+        number: '14',
         description: 'Projects he worked on'
     },
     {

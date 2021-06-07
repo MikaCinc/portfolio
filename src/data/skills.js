@@ -1,5 +1,5 @@
 const skills = [
-    'JavaScript / ES6 & beyond', 
+    'JavaScript / ES6 & beyond',
     'React.js',
     'React Native',
     'Redux.js',
@@ -19,7 +19,8 @@ const skills = [
     'Bootstrap',
     'Visual Studio Code',
     'jQuery',
-    'C' 
+    'C',
+    'C++'
 ];
 
 export default skills;
