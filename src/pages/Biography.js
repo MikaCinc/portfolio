@@ -12,10 +12,6 @@ import bio from '../data/bio.js';
 import MainContext from '../context/mainContext';
 import themes from '../themes';
 
-/* Lazy */
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
-
 const Biography = ({ history }) => {
     const { theme } = useContext(MainContext);
 
@@ -44,16 +40,7 @@ const Biography = ({ history }) => {
             </div>
             <div className="inner-element">
                 <div className="flex-wrapper">
-                    <LazyLoadImage
-                        alt={"Mihajlo"}
-                        src={bioPic}
-                        effect="blur"
-                        width="300"
-                        height="230"
-                        className="bioPic"
-                        // visibleByDefault
-                    />
-                    {/* <img className="bioPic" width="300" height="230" src={bioPic} alt="Mihajlo"></img> */}
+                    <img className="bioPic" width="300" height="230" src={bioPic} alt="Mihajlo"></img>
                     <p className="bioParagraph">{bio}</p>
                 </div>
             </div>
