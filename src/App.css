@@ -689,6 +689,10 @@ p {
   grid-area: 6 / 5 / span 1 / span 1;
 }
 
+.projects-cryptoSim {
+  grid-area: 6 / 6 / span 1 / span 1;
+}
+
 /* Responsive */
 
 @media (min-width: 800px) {
