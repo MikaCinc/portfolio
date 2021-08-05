@@ -4,6 +4,8 @@ import SourceCode from '../icons/source-code.png';
 import Durango from '../icons/durango.png';
 import PropCentral from '../icons/propcentral.png';
 import ServierBar from '../icons/servier-bar.png';
+import KFC from '../icons/kfc-logo.png';
+import TVP from '../icons/tvp.png';
 import Supreme from '../icons/supreme.jpg';
 import Mastermind from '../icons/brain.png';
 import Memory from '../icons/dice.png';
@@ -156,6 +158,24 @@ const Projects = ({ history }) => {
                         src={ServierBar}
                         className="centerIcon"
                         alt="servier.bar"
+                    />
+                </div>
+                <div className="projects-kfc tile reveal small acrylic"
+                    onClick={() => console.log("Working in a team building KIOSK app for KFC in Poland")}
+                >
+                    <img
+                        src={KFC}
+                        className="centerIcon"
+                        alt="kfc kiosk app"
+                    />
+                </div>
+                <div className="projects-tvp tile reveal small acrylic"
+                    onClick={() => console.log("Working in a team building Tizen TV app in React.js for TVP Sport in Poland")}
+                >
+                    <img
+                        src={TVP}
+                        className="centerIcon"
+                        alt="tvp sport tizen app"
                     />
                 </div>
             </div>

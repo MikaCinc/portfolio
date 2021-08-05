@@ -280,6 +280,7 @@ p {
   mask-position: inherit;
   mask-size: inherit;
   mask-repeat: space;
+  z-index: 10;
 }
 
 .tile:focus {
@@ -677,6 +678,14 @@ p {
 
 .projects-servierbar {
   grid-area: 5 / 1 / span 2 / span 2;
+}
+
+.projects-kfc {
+  grid-area: 6 / 4 / span 1 / span 1;
+}
+
+.projects-tvp {
+  grid-area: 6 / 5 / span 1 / span 1;
 }
 
 /* Responsive */
