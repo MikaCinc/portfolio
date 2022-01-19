@@ -12,7 +12,7 @@ import GitHub from '../icons/github.png';
 import QuestionMark from '../icons/question-mark.png';
 import Mail from '../icons/mail.png';
 import Personalization from '../icons/paint3d.png';
-import Durango from '../icons/durango.png';
+import Experiment from '../icons/experiment.png';
 import Folder from '../icons/program-folder.png';
 import MindMap from '../icons/mind-map.png';
 import HardWorking from '../icons/hard-working.png';
@@ -131,15 +131,15 @@ const Home = ({ history }) => {
                         alt="github"
                     />
                 </div>
-                <div className="item-durango tile reveal small acrylic"
+                <div className="item-testovi tile reveal small acrylic"
                     onClick={() => {
-                        window.open('https://durango.rs', '_blank');
+                        window.open('https://testovi.mihajlo.tech/', '_blank');
                     }}
                 >
                     <img
-                        src={Durango}
+                        src={Experiment}
                         className="smallIcon"
-                        alt="durango"
+                        alt="testovi"
                     />
                 </div>
                 <div
@@ -296,7 +296,7 @@ const Home = ({ history }) => {
                 </div>
                 <div className="item-version tile reveal small acrylic">
                     <div className="tileContent">
-                        <p className="tileText">V1.5.4</p>
+                        <p className="tileText">V1.5.6</p>
                     </div>
                 </div>
                 <div

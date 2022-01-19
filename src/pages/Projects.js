@@ -2,6 +2,8 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 import SourceCode from "../icons/source-code.png";
 import Durango from "../icons/durango.png";
+import Testovi from "../icons/testovi-beta-icon.png";
+import TestoviLite from "../icons/testovi-lite.png";
 import PropCentral from "../icons/propcentral.png";
 import ServierBar from "../icons/servier-bar.png";
 import KFC from "../icons/kfc-logo.png";
@@ -56,12 +58,12 @@ const Projects = ({ history }) => {
           <img src={CapitalCities} className="smallIcon" alt="capital cities" />
         </div>
         <div
-          className="projects-10010 tile reveal small acrylic"
+          className="projects-testovi-lite tile reveal small acrylic"
           onClick={() => {
-            window.open("https://mikacinc.github.io/10010/", "_blank");
+            window.open("https://github.com/MikaCinc/testovi-lite", "_blank");
           }}
         >
-          <img src={Party} className="smallIcon" alt="party invitation" />
+          <img src={TestoviLite} className="smallIcon" alt="party invitation" />
         </div>
         <div
           className="projects-old-portfolio tile reveal small acrylic"
@@ -104,7 +106,7 @@ const Projects = ({ history }) => {
           <img src={Supreme} className="smallIcon" alt="fitness-supreme" />
         </div>
         <div
-          className="projects-neon tile reveal wide acrylic"
+          className="projects-neon tile reveal medium acrylic"
           onClick={() => {
             window.open("https://mikacinc.github.io/Neon-React/", "_blank");
           }}
@@ -117,7 +119,7 @@ const Projects = ({ history }) => {
           </div>
         </div>
         <div
-          className="projects-durango tile reveal wide acrylic"
+          className="projects-durango tile reveal medium acrylic"
           onClick={() => {
             window.open("https://durango.rs", "_blank");
           }}
@@ -162,6 +164,15 @@ const Projects = ({ history }) => {
           }}
         >
           <img src={Chart} className="centerIcon" alt="crypto simulator" />
+        </div>
+        <div
+          className="projects-testovi tile reveal wide acrylic"
+          onClick={() => {
+            window.open("https://testovi.mihajlo.tech/", "_blank");
+          }}
+        >
+          <p className="tileTitle">testovi.mihajlo.tech (Preview)</p>
+          <img src={Testovi} className="centerIcon" alt="durango" />
         </div>
       </div>
     </Fade>

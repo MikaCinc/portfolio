@@ -141,7 +141,7 @@ p {
   grid-area: 8 / 4 / 10 / 8;
 }
 
-.item-durango {
+.item-testovi {
   grid-area: 8 / 8 / 8 / 8;
 }
 
@@ -637,8 +637,12 @@ p {
   transform: translateX(-50%) !important;
 }
 
-.projects-durango {
+.projects-testovi {
   grid-area: 1 / 1 / span 2 / span 4;
+}
+
+.projects-durango {
+  grid-area: 4 / 3 / span 2 / span 2;
 }
 
 .projects-propcentral {
@@ -650,7 +654,7 @@ p {
 }
 
 .projects-neon {
-  grid-area: 4 / 3 / span 2 / span 4;
+  grid-area: 4 / 5 / span 2 / span 2;
 }
 
 .projects-mastermind {
@@ -665,7 +669,7 @@ p {
   grid-area: 3 / 3 / span 1 / span 1;
 }
 
-.projects-10010 {
+.projects-testovi-lite {
   grid-area: 3 / 4 / span 1 / span 1;
 }
 

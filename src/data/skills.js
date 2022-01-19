@@ -1,27 +1,18 @@
 const skills = [
-    'JavaScript / ES6 & beyond',
-    'React.js',
-    'React Native',
+    'JavaScript / ES10 & beyond',
+    'TypeScript',
+    'React & React Native',
     'Next.js',
     'Redux.js',
     'Progressive Web Apps',
-    'Node.js',
-    'Express',
+    'Node.js & Express',
     'PostgreSQL',
     'Cypress',
-    'HTML',
-    'CSS',
-    'Git',
-    'GitHub',
+    'HTML & CSS',
+    'Git & GitHub & BitBucket',
     'NPM',
-    '_.lodash',
-    'moment.js',
-    'BitBucket',
-    'Bootstrap',
-    'VS Code',
-    'jQuery',
-    'C',
-    'C++'
+    '_.lodash & moment.js',
+    'MaterialUI & Bootstrap'
 ];
 
 export default skills;
