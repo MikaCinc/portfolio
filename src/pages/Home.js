@@ -12,7 +12,8 @@ import GitHub from '../icons/github.png';
 import QuestionMark from '../icons/question-mark.png';
 import Mail from '../icons/mail.png';
 import Personalization from '../icons/paint3d.png';
-import Experiment from '../icons/experiment.png';
+// import Experiment from '../icons/experiment.png';
+import Experiment from "../icons/testovi-beta-icon.png";
 import Folder from '../icons/program-folder.png';
 import MindMap from '../icons/mind-map.png';
 import HardWorking from '../icons/hard-working.png';
@@ -296,7 +297,7 @@ const Home = ({ history }) => {
                 </div>
                 <div className="item-version tile reveal small acrylic">
                     <div className="tileContent">
-                        <p className="tileText">V1.5.7</p>
+                        <p className="tileText">V1.5.8</p>
                     </div>
                 </div>
                 <div

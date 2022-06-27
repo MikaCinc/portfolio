@@ -2,7 +2,7 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 import SourceCode from "../icons/source-code.png";
 import Durango from "../icons/durango.png";
-import Testovi from "../icons/testovi-beta-icon.png";
+import Testovi from "../icons/testovi-beta-icon_2.png";
 import TestoviLite from "../icons/testovi-lite.png";
 import PropCentral from "../icons/propcentral.png";
 import ServierBar from "../icons/servier-bar.png";
@@ -171,8 +171,8 @@ const Projects = ({ history }) => {
             window.open("https://testovi.mihajlo.tech/", "_blank");
           }}
         >
-          <p className="tileTitle">testovi.mihajlo.tech (Preview)</p>
-          <img src={Testovi} className="centerIcon" alt="durango" />
+          <p className="tileTitle">testovi.mihajlo.tech (Beta)</p>
+          <img src={Testovi} className="centerIcon" alt="cortex" />
         </div>
       </div>
     </Fade>

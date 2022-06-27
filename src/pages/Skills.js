@@ -57,8 +57,8 @@ const Skills = ({ history }) => {
               <p>College level</p>
               <p>
                 <span>C & C++ & C# (.NET)</span>
-                <span>Assembler</span>
-                <span>jQuery</span>
+                <span>Assembler & Docker</span>
+                <span>Rx.js & Angular & Nest.js</span>
               </p>
             </div>
             <div className="even-skill-group">
