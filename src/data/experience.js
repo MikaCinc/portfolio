@@ -1,12 +1,17 @@
 const experience = [
   {
-    title: "Web Developer @ Boopro",
-    date: "October 2020 - present",
+    title: "React developer @ Immoledo",
+    date: "September 2022 - Present",
     priority: "main",
   },
   {
     title: "React Native developer @ Attulo",
     date: "September 2021 - December 2021",
+    priority: "main",
+  },
+  {
+    title: "Web Developer @ Boopro",
+    date: "October 2020 - September 2021",
     priority: "main",
   },
   {
@@ -25,9 +30,19 @@ const experience = [
     priority: "main",
   },
   {
+    title: "Founder & Mentor @ //KODIAK/",
+    date: "November 2017 - April 2018",
+    priority: "main",
+  },
+  {
+    title: "Member @ NGO 'Nauči Me'",
+    date: "January 2017 - September 2018",
+    priority: "main",
+  },
+  {
     title: "Public speaker @ national project #BudućnostZa5",
     date: "April 2019",
-    priority: "main",
+    priority: "other",
   },
   {
     title: "(particip.) IT Konekt",
@@ -37,22 +52,12 @@ const experience = [
   {
     title: "Photoshoping glasses for Clair Optiek",
     date: "Jun 2018 - March 2019",
-    priority: "main",
+    priority: "other",
   },
   {
     title: "Developer @ Fitness Supreme",
     date: "August 2018 - November 2018",
-    priority: "main",
-  },
-  {
-    title: "Founder & Mentor @ //KODIAK/",
-    date: "November 2017 - April 2018",
-    priority: "main",
-  },
-  {
-    title: "Member @ NGO 'Nauči Me'",
-    date: "January 2017 - September 2018",
-    priority: "main",
+    priority: "other",
   },
   {
     title: "Mentor @ CodeRobotic(V. 1.0 & V. 2.0)",

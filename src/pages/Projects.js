@@ -12,7 +12,6 @@ import Chart from "../icons/chart.png";
 import Supreme from "../icons/supreme.jpg";
 import Mastermind from "../icons/brain.png";
 import Memory from "../icons/dice.png";
-import Party from "../icons/party.png";
 import CapitalCities from "../icons/city.png";
 import OldPortfolio from "../icons/old-portfolio.png";
 import Packages from "../icons/packaging.png";
@@ -160,7 +159,7 @@ const Projects = ({ history }) => {
           className="projects-cryptoSim tile reveal small acrylic"
           onClick={() => {
             console.log("Simple random crypto chart simulator");
-            window.open("https://mikacinc.github.io/CryptoSim/", "_blank");
+            window.open("https://github.com/MikaCinc/rwa-rxjs", "_blank");
           }}
         >
           <img src={Chart} className="centerIcon" alt="crypto simulator" />
