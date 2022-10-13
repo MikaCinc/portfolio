@@ -1,25 +1,21 @@
-import React, {
-    useEffect,
-    useState,
-    useContext
-} from 'react';
+import React, { useEffect, useState, useContext } from "react";
 
 /* Icons */
-import profilePicture from '../pictures/prof.jpg';
-import Instagram from '../icons/instagram.png';
-import LinkedIn from '../icons/linkedin.png';
-import GitHub from '../icons/github.png';
-import QuestionMark from '../icons/question-mark.png';
-import Mail from '../icons/mail.png';
-import Personalization from '../icons/paint3d.png';
+import profilePicture from "../pictures/prof.jpg";
+import Instagram from "../icons/instagram.png";
+import LinkedIn from "../icons/linkedin.png";
+import GitHub from "../icons/github.png";
+import QuestionMark from "../icons/question-mark.png";
+import Mail from "../icons/mail.png";
+import Personalization from "../icons/paint3d.png";
 // import Experiment from '../icons/experiment.png';
 import Experiment from "../icons/testovi-beta-icon.png";
-import Folder from '../icons/program-folder.png';
-import MindMap from '../icons/mind-map.png';
-import HardWorking from '../icons/hard-working.png';
-import Skills from '../icons/skills.png';
-import Input from '../icons/input.png';
-import ByTheNumbers from '../icons/neutral-trading.png';
+import Folder from "../icons/program-folder.png";
+import MindMap from "../icons/mind-map.png";
+import HardWorking from "../icons/hard-working.png";
+import Skills from "../icons/skills.png";
+import Input from "../icons/input.png";
+import ByTheNumbers from "../icons/neutral-trading.png";
 
 /* Components */
 // import Badge from '../Components/Badge';
@@ -27,294 +23,247 @@ import ByTheNumbers from '../icons/neutral-trading.png';
 /* Animations */
 // import TransitionGroup from 'react-transition-group/TransitionGroup';
 
-import Zoom from 'react-reveal/Zoom';
-import Slide from 'react-reveal/Slide';
-import Fade from 'react-reveal/Fade';
-import RubberBand from 'react-reveal/RubberBand';
+import Zoom from "react-reveal/Zoom";
+import Slide from "react-reveal/Slide";
+import Fade from "react-reveal/Fade";
+import RubberBand from "react-reveal/RubberBand";
+import TransitionGroup from "react-transition-group/TransitionGroup";
 
 /* Data */
-import skills from '../data/skills';
-import experiences from '../data/experience';
-import byTheNumbers from '../data/byTheNumbers';
+import skills from "../data/skills";
+import experiences from "../data/experience";
+import byTheNumbers from "../data/byTheNumbers";
 
 /* Context */
-import MainContext from '../context/mainContext';
+import MainContext from "../context/mainContext";
 
 const Home = ({ history }) => {
-    const { theme, setTheme, homeBottomAnimation, setHomeBottomAnimation } = useContext(MainContext);
-    // const [theme, setTheme] = useState(0);
-    const [iconClassName, setIconClassName] = useState('centerIcon');
-    const [skill, setSkill] = useState('');
-    const [experience, setExperience] = useState('');
-    const [byTheNumber, setByTheNumber] = useState('');
+  const { theme, setTheme, homeBottomAnimation, setHomeBottomAnimation } =
+    useContext(MainContext);
+  // const [theme, setTheme] = useState(0);
+  const [iconClassName, setIconClassName] = useState("centerIcon");
+  const [skill, setSkill] = useState({ prev: null, current: null });
+  const [experience, setExperience] = useState({ prev: null, current: null });
+  const [activeExperience, setActiveExperience] = useState([]);
+  const [byTheNumber, setByTheNumber] = useState({ prev: null, current: null });
 
-    useEffect(() => {
-        let interval1, interval2, interval3;
-        interval1 = setInterval(() => {
-            setSkill(Math.floor(Math.random() * skills.length));
-        }, 2000);
-        interval2 = setInterval(() => {
-            setExperience(Math.floor(Math.random() * experiences.length));
-        }, 3500);
-        interval3 = setInterval(() => {
-            setByTheNumber(Math.floor(Math.random() * byTheNumbers.length));
-        }, 3000);
+  useEffect(() => {
+    let interval1, interval2, interval3;
+    interval1 = setInterval(() => {
+      setSkill({
+        prev: skill.current,
+        current: Math.floor(Math.random() * skills.length),
+      });
+    }, 2000);
+    interval2 = setInterval(() => {
+      /* setExperience({
+        prev: experience.current,
+        current: Math.floor(Math.random() * experiences.length),
+      }); */
+      const index = Math.floor(Math.random() * experiences.length);
+      setActiveExperience([experiences[index]]);
+    }, 3500);
+    interval3 = setInterval(() => {
+      setByTheNumber({
+        prev: byTheNumber.current,
+        current: Math.floor(Math.random() * byTheNumbers.length),
+      });
+    }, 3000);
 
-        return () => {
-            clearInterval(interval1);
-            clearInterval(interval2);
-            clearInterval(interval3);
-        }
-    }, []);
+    return () => {
+      clearInterval(interval1);
+      clearInterval(interval2);
+      clearInterval(interval3);
+    };
+  }, []);
 
-    useEffect(() => {
-        let timeout = setTimeout(() => {
-            setIconClassName('tileIcon');
-        }, 2000);
+  useEffect(() => {
+    let timeout = setTimeout(() => {
+      setIconClassName("tileIcon");
+    }, 2000);
 
-        return () => {
-            clearTimeout(timeout);
-        }
-    }, [])
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
 
-    return (
-        <Zoom
-            cascade
-            bottom={homeBottomAnimation}
-            duration={850}
+  return (
+    <Zoom cascade bottom={homeBottomAnimation} duration={850}>
+      <div className="mainContainer">
+        <div className={`item-profile-picture tile reveal wide acrylic`}>
+          <img
+            src={profilePicture}
+            className="profilePicture"
+            alt="profilePicture"
+          />
+          <div className="profile-info-div">
+            <Zoom cascade delay={800}>
+              <p>Mihajlo</p>
+            </Zoom>
+            <Zoom cascade delay={950}>
+              <p>Marjanović</p>
+            </Zoom>
+          </div>
+        </div>
+        <div
+          className="item-instagram tile reveal small acrylic"
+          onClick={() => {
+            window.open("https://www.instagram.com/mikac_inc/", "_blank");
+          }}
         >
-            <div className="mainContainer">
-                <div className={`item-profile-picture tile reveal wide acrylic`}>
-                    <img
-                        src={profilePicture}
-                        className="profilePicture"
-                        alt="profilePicture"
-                    />
-                    <div className="profile-info-div">
-                        <Zoom cascade delay={800}>
-                            <p>Mihajlo</p>
-                        </Zoom>
-                        <Zoom cascade delay={950}>
-                            <p>Marjanović</p>
-                        </Zoom>
-                    </div>
-                </div>
-                <div className="item-instagram tile reveal small acrylic"
-                    onClick={() => {
-                        window.open('https://www.instagram.com/mikac_inc/', '_blank');
-                    }}
+          <img src={Instagram} className="smallIcon" alt="instagram" />
+        </div>
+        <div
+          className="item-linkedin tile reveal small acrylic"
+          onClick={() => {
+            window.open("https://www.linkedin.com/in/mikacinc/", "_blank");
+          }}
+        >
+          <img src={LinkedIn} className="smallIcon" alt="linkedin" />
+        </div>
+        <div
+          className="item-github tile reveal small acrylic"
+          onClick={() => {
+            window.open("https://github.com/MikaCinc", "_blank");
+          }}
+        >
+          <img src={GitHub} className="smallIcon" alt="github" />
+        </div>
+        <div
+          className="item-testovi tile reveal small acrylic"
+          onClick={() => {
+            window.open("https://testovi.mihajlo.tech/", "_blank");
+          }}
+        >
+          <img src={Experiment} className="smallIcon" alt="testovi" />
+        </div>
+        <div
+          className="item-biography medium tile reveal acrylic"
+          onClick={() => {
+            history.push("/biography");
+          }}
+        >
+          <p className="tileTitle">Biography</p>
+          <img className={"centerIcon"} src={HardWorking} alt="tile icon" />
+        </div>
+        <div
+          className="item-byTheNumbers tile reveal wide acrylic"
+          onClick={() => {
+            history.push("/bythenumbers");
+          }}
+        >
+          <div className="tileContent">
+            <Zoom spy={byTheNumber.current} cascade>
+              {(byTheNumber.current || byTheNumber.current === 0) && (
+                <p className="tileText">
+                  {`${byTheNumbers[byTheNumber.current].number} | ${
+                    byTheNumbers[byTheNumber.current].description
+                  }`}
+                </p>
+              )}
+            </Zoom>
+          </div>
+          <p className="tileTitle">By The Numbers</p>
+          <Slide bottom spy={iconClassName}>
+            <img className={iconClassName} src={ByTheNumbers} alt="tile icon" />
+          </Slide>
+        </div>
+        <div
+          className="item-contact tile reveal small acrylic"
+          onClick={() => {
+            window.location.href = "mailto:mihajlo.ls00@outlook.com";
+          }}
+        >
+          <img src={Mail} className="smallIcon" alt="contact" />
+        </div>
+        <div
+          className="item-personalization tile reveal small acrylic"
+          onClick={() => {
+            setTheme(theme + 1);
+          }}
+        >
+          <img src={Personalization} className="smallIcon" alt="dark mode" />
+        </div>
+        <div
+          className="item-achievements tile reveal small acrylic"
+          onClick={() => {}}
+        >
+          {/* <Badge label="soon" /> */}
+          <img src={MindMap} className="smallIcon" alt="dark mode" />
+        </div>
+        <div
+          className="item-skills tile reveal medium acrylic"
+          onClick={() => {
+            history.push("/skills");
+          }}
+        >
+          <div className="tileContent">
+            <RubberBand spy={skill.current}>
+              {(skill.current || skill.current === 0) && (
+                <p className="tileText">{skills[skill.current]}</p>
+              )}
+            </RubberBand>
+          </div>
+          <p className="tileTitle">Skills</p>
+          <Slide bottom spy={iconClassName}>
+            <img className={iconClassName} src={Skills} alt="tile icon" />
+          </Slide>
+        </div>
+        <div
+          className="item-projects tile reveal medium acrylic"
+          onClick={() => {
+            history.push("/projects");
+          }}
+        >
+          <p className="tileTitle">Projects</p>
+          <img className={"centerIcon"} src={Folder} alt="tile icon" />
+        </div>
+        <div
+          className="item-experience tile reveal wide acrylic"
+          onClick={() => {
+            history.push("/experience");
+          }}
+        >
+          <div className="tileContent">
+            <TransitionGroup appear enter exit>
+              {activeExperience.map(({ title }) => (
+                <Fade
+                  key={title}
+                  /* spy={experience.current} */ bottom
+                //   cascade
+                //   opposite
+                  collapse
                 >
-                    <img
-                        src={Instagram}
-                        className="smallIcon"
-                        alt="instagram"
-                    />
-                </div>
-                <div className="item-linkedin tile reveal small acrylic"
-                    onClick={() => {
-                        window.open('https://www.linkedin.com/in/mikacinc/', '_blank');
-                    }}
-                >
-                    <img
-                        src={LinkedIn}
-                        className="smallIcon"
-                        alt="linkedin"
-                    />
-                </div>
-                <div className="item-github tile reveal small acrylic"
-                    onClick={() => {
-                        window.open('https://github.com/MikaCinc', '_blank');
-                    }}
-                >
-                    <img
-                        src={GitHub}
-                        className="smallIcon"
-                        alt="github"
-                    />
-                </div>
-                <div className="item-testovi tile reveal small acrylic"
-                    onClick={() => {
-                        window.open('https://testovi.mihajlo.tech/', '_blank');
-                    }}
-                >
-                    <img
-                        src={Experiment}
-                        className="smallIcon"
-                        alt="testovi"
-                    />
-                </div>
-                <div
-                    className="item-biography medium tile reveal acrylic"
-                    onClick={() => {
-                        history.push('/biography');
-                    }}
-                >
-                    <p className="tileTitle">Biography</p>
-                    <img
-                        className={'centerIcon'}
-                        src={HardWorking}
-                        alt="tile icon"
-                    />
-                </div>
-                <div
-                    className="item-byTheNumbers tile reveal wide acrylic"
-                    onClick={() => {
-                        history.push('/bythenumbers');
-                    }}
-                >
-                    <div className="tileContent">
-                        <Zoom spy={byTheNumber} cascade>
-                            {
-                                (byTheNumber || byTheNumber === 0)
-                                && <p
-                                    className="tileText"
-                                >
-                                    {
-                                        `${byTheNumbers[byTheNumber].number} | ${byTheNumbers[byTheNumber].description}`
-                                    }
-                                </p>
-                            }
-                        </Zoom>
-                    </div>
-                    <p className="tileTitle">By The Numbers</p>
-                    <Slide
-                        bottom
-                        spy={iconClassName}
-                    >
-                        <img
-                            className={iconClassName}
-                            src={ByTheNumbers}
-                            alt="tile icon"
-                        />
-                    </Slide>
-                </div>
-                <div className="item-contact tile reveal small acrylic"
-                    onClick={() => {
-                        window.location.href = "mailto:mihajlo.ls00@outlook.com";
-                    }}
-                >
-                    <img
-                        src={Mail}
-                        className="smallIcon"
-                        alt="contact"
-                    />
-                </div>
-                <div className="item-personalization tile reveal small acrylic"
-                    onClick={() => {
-                        setTheme(theme + 1);
-                    }}
-                >
-                    <img
-                        src={Personalization}
-                        className="smallIcon"
-                        alt="dark mode"
-                    />
-                </div>
-                <div className="item-achievements tile reveal small acrylic"
-                    onClick={() => {
-
-                    }}
-                >
-                    {/* <Badge label="soon" /> */}
-                    <img
-                        src={MindMap}
-                        className="smallIcon"
-                        alt="dark mode"
-                    />
-                </div>
-                <div
-                    className="item-skills tile reveal medium acrylic"
-                    onClick={() => {
-                        history.push('/skills');
-                    }}
-                >
-                    <div className="tileContent">
-                        <RubberBand spy={skill}>
-                            {(skill || skill === 0) && <p className="tileText">{skills[skill]}</p>}
-                        </RubberBand>
-                    </div>
-                    <p className="tileTitle">Skills</p>
-                    <Slide
-                        bottom
-                        spy={iconClassName}
-                    >
-                        <img
-                            className={iconClassName}
-                            src={Skills}
-                            alt="tile icon"
-                        />
-                    </Slide>
-                </div>
-                <div
-                    className="item-projects tile reveal medium acrylic"
-                    onClick={() => {
-                        history.push('/projects');
-                    }}
-                >
-                    <p className="tileTitle">Projects</p>
-                    <img
-                        className={'centerIcon'}
-                        src={Folder}
-                        alt="tile icon"
-                    />
-                </div>
-                <div
-                    className="item-experience tile reveal wide acrylic"
-                    onClick={() => {
-                        history.push('/experience');
-                    }}
-                >
-                    <div className="tileContent">
-                        <Fade
-                            spy={experience}
-                            bottom
-                            exit
-                            cascade
-                        >
-                            {
-                                (experience || experience === 0) &&
-                                <p
-                                    className="tileText"
-                                >
-                                    {
-                                        experiences[experience].title
-                                    }
-                                </p>
-                            }
-                        </Fade>
-                    </div>
-                    <p className="tileTitle">Experience</p>
-                    <Slide
-                        bottom
-                        spy={iconClassName}
-                    >
-                        <img
-                            className={iconClassName}
-                            src={Input}
-                            alt="tile icon"
-                        />
-                    </Slide>
-                </div>
-                <div className="item-version tile reveal small acrylic">
-                    <div className="tileContent">
-                        <p className="tileText">V1.5.8</p>
-                    </div>
-                </div>
-                <div
-                    className="item-animation tile reveal small acrylic"
-                    onClick={() => {
-                        setHomeBottomAnimation(!homeBottomAnimation);
-                    }}
-                >
-                    <img
-                        src={QuestionMark}
-                        className="smallIcon"
-                        alt="home animation mode"
-                    />
-                </div>
-            </div>
-        </Zoom>
-    );
-}
+                  <p className="tileText">{title}</p>
+                </Fade>
+              ))}
+            </TransitionGroup>
+          </div>
+          <p className="tileTitle">Experience</p>
+          <Slide bottom spy={iconClassName}>
+            <img className={iconClassName} src={Input} alt="tile icon" />
+          </Slide>
+        </div>
+        <div className="item-version tile reveal small acrylic">
+          <div className="tileContent">
+            <p className="tileText">V1.5.8</p>
+          </div>
+        </div>
+        <div
+          className="item-animation tile reveal small acrylic"
+          onClick={() => {
+            setHomeBottomAnimation(!homeBottomAnimation);
+          }}
+        >
+          <img
+            src={QuestionMark}
+            className="smallIcon"
+            alt="home animation mode"
+          />
+        </div>
+      </div>
+    </Zoom>
+  );
+};
 
 export default Home;
