@@ -71,16 +71,6 @@ const Experience = ({ history }) => {
             ))}
           </div>
         </Fade>
-        {/* <Fade cascade collapse bottom when={priority === "main + other"}>
-          <div className="flex-wrapper flex-wrapper-experience">
-            {otherExperiences.map(({ title, date }, index) => (
-              <div key={index}>
-                <p className="gradientTextLite4">{title}</p>
-                <p>{date}</p>
-              </div>
-            ))}
-          </div>
-        </Fade> */}
       </div>
       <div
         className="icon-button-wrapper reveal"
