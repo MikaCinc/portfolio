@@ -1,5 +1,5 @@
 {
-  "homepage": "https://www.mihajlo.tech",
+  "homepage": "https://mihajlo.inicijativa.software",
   "name": "portfolio-react",
   "version": "0.1.0",
   "private": true,
@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build && COPY \"CNAME\" \"./build/CNAME\" && COPY \"appads.txt\" \"./build/app-ads.txt\"",
+    "predeploy": "npm run build; cp \"CNAME\" \"./build/CNAME\"; cp \"appads.txt\" \"./build/app-ads.txt\"",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {

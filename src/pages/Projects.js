@@ -170,7 +170,7 @@ const Projects = ({ history }) => {
             window.open("https://cortex.inicijativa.software/", "_blank");
           }}
         >
-          <p className="tileTitle">cortex.inicijativa.software (Beta)</p>
+          <p className="tileTitle">Project Cortex</p>
           <img src={Testovi} className="centerIcon" alt="cortex" />
         </div>
       </div>
