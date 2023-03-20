@@ -134,7 +134,7 @@ const Home = ({ history }) => {
                 </div>
                 <div className="item-testovi tile reveal small acrylic"
                     onClick={() => {
-                        window.open('https://testovi.mihajlo.tech/', '_blank');
+                        window.open('https://cortex.inicijativa.software/', '_blank');
                     }}
                 >
                     <img

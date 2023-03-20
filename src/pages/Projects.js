@@ -167,10 +167,10 @@ const Projects = ({ history }) => {
         <div
           className="projects-testovi tile reveal wide acrylic"
           onClick={() => {
-            window.open("https://testovi.mihajlo.tech/", "_blank");
+            window.open("https://cortex.inicijativa.software/", "_blank");
           }}
         >
-          <p className="tileTitle">testovi.mihajlo.tech (Beta)</p>
+          <p className="tileTitle">cortex.inicijativa.software (Beta)</p>
           <img src={Testovi} className="centerIcon" alt="cortex" />
         </div>
       </div>
